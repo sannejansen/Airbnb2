@@ -69,8 +69,17 @@ The mean of the prices of the listings in a specific neigborhood from the first 
 After seeing these results, it can be concluded that most of the listings were priced lower at the end of the year, compared to the beginning, also in the popular neigborhoods. In this case it cannot be concluded that the popularity of a neigborhood affects the price of a listing. A possible explanation for the decrease in price, might be COVID-19. In order to keep attracting people, it is possible that the prices have been reduced during this period. To get a better insight, it would be interesting to redo the analysis, with data unaffected by COVID-19.
 
 ## **Repository Overview**
-<img width="205" alt="image" src="https://user-images.githubusercontent.com/98964062/166496038-e45a4043-6195-4686-abca-f7eac2080550.png">
-
+```txt
+├── data
+├── gen
+│   ├── analysis
+│   ├── data-preparation
+│   ├── paper
+└── src
+    ├── analysis
+    ├── data-preparation
+    └── paper
+```
 ## **Running Instructions**
 The running instructions can be found [here](https://github.com/sannejansen/Airbnb_Holmes/blob/my_project/Project%20documentation.md).
 
