@@ -115,4 +115,18 @@ Clone the repository, this can be done by clicking the green button on the top r
 ## **About**
 This repository is created by five students of the master Marketing Analytics at Tilburg University. For the course Data Preparation and Workflow Management, coordinated and instructed by Associate Professor Hannes Datta.
 
-https://github-readme-stats.vercel.app/api?username=sannejansen
+### Authors, Email addresses and GitHub Stats Cards<br/>
+- Dianne Burgess (MSc Marketing Analytics student)
+   - d.h.burgess@tilburguniversity.edu <br/>
+   - https://github-readme-stats.vercel.app/api?username=DianneBurgess
+- Hidde Devenijns (MSc Marketing Analytics & MSc Marketing Management student)
+   - h.w.a.devenijns@tilburguniversity.edu <br/>
+   - https://github-readme-stats.vercel.app/api?username=HiddeDevenijns
+- Iris Heuten (MSc Marketing Analytics & MSc Marketing Management student) - 
+   - i.r.b.heuten@tilburguniversity.edu <br/>
+- Sanne Jansen (MSc Marketing Analytics & MSc Marketing Management student)
+   - s.m.p.jansen@tilburguniversity.edu <br/>
+   - https://github-readme-stats.vercel.app/api?username=sannejansen
+- Iris van Walraven (MSc Marketing Analytics & MSc Marketing Management student)
+   - i.r.m.vanwalraven@tilburguniversity.edu <br/>
+   - https://github-readme-stats.vercel.app/api?username=irisvanwalraven
