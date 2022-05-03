@@ -29,7 +29,7 @@ The following programs need to be installed to replicate the project:<br/>
     - R and R studio can be installed following the set up instructions that can be found [here](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/) <br/>
       - Packages that need to be installed to run code in R: "haven", "dplyr", "ggplot2", "cluster", "factoextra", "car", "lubridate", "reshape2", "reshape", "TSstudio", and "tidyverse". <br/>
   
-- make <br/>
+- make <br/> 
     - For installation instructions on make for Mac and Windows users, you can click [here](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/).
 
 - Git
