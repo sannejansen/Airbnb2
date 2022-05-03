@@ -1,4 +1,6 @@
 # **Watch Out: Do the Airbnb Prices in Amsterdam Increase Rapidly?**
+![image](https://user-images.githubusercontent.com/98964062/166501741-9aa27bd8-3a58-4319-9058-2ec5d39fa900.png)
+
 ### *To what extent does the neighborhood popularity influence the prices of listings in Amsterdam?*
 
 ## **Research Motivation**
