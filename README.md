@@ -124,6 +124,7 @@ This repository is created by five students of the master Marketing Analytics at
    - https://github-readme-stats.vercel.app/api?username=HiddeDevenijns
 - Iris Heuten - MSc Marketing Analytics & MSc Marketing Management student
    - i.r.b.heuten@tilburguniversity.edu <br/>
+   - https://github-readme-stats.vercel.app/api?username=IrisTilburg
 - Sanne Jansen - MSc Marketing Analytics & MSc Marketing Management student
    - s.m.p.jansen@tilburguniversity.edu <br/>
    - https://github-readme-stats.vercel.app/api?username=sannejansen
