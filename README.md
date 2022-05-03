@@ -115,4 +115,4 @@ Clone the repository, this can be done by clicking the green button on the top r
 ## **About**
 This repository is created by five students of the master Marketing Analytics at Tilburg University. For the course Data Preparation and Workflow Management, coordinated and instructed by Associate Professor Hannes Datta.
 
-https://github-readme-stats.vercel.app/api?username=<YOUR_USERNAME>
+https://github-readme-stats.vercel.app/api?username=sannejansen
