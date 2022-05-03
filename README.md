@@ -8,7 +8,7 @@ Airbnb is one of the largest platforms for sharing accomodations worldwide and i
 ![Schermafbeelding 2022-03-27 om 14 54 11](https://user-images.githubusercontent.com/98964017/160283320-99261301-9756-4fc7-9d2e-d9597861569d.png)
 
 ### **Running Instructions**
-The running instructions can be found [here](https://github.com/sannejansen/Airbnb_Holmes/blob/my_project/Project%20documentation.md).
+The running instructions can be found [here](https://github.com/sannejansen/Airbnb2/blob/Sanne/Project%20documentation.md).
  
 ### **Method, Results and Conclusion**
 We decided to look at a possible causal relationship between the popularity of a neighborhood and the price of a listing in Amsterdam. Therefore we have the price difference percentage over time by neighborhood, compared to all neighborhoods. After conducting our research we have come to a number of conclusions. Since it was not possible to analyze the number of listings in a given district over time, we made the following assumption: the popularity of a neigbourhood depends on the number of listings in that particular neighborhood. So, for example: the neighborhood with the most listings is the most popular, while the neighborhood with the least listings is the least popular. By making this assumption, these are the five most popular neighborhoods in Amsterdam:
