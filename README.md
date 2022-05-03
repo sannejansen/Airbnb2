@@ -68,16 +68,16 @@ The mean of the prices of the listings in a specific neigborhood from the first 
 
 After seeing these results, it can be concluded that most of the listings were priced lower at the end of the year, compared to the beginning, also in the popular neigborhoods. In this case it cannot be concluded that the popularity of a neigborhood affects the price of a listing. A possible explanation for the decrease in price, might be COVID-19. In order to keep attracting people, it is possible that the prices have been reduced during this period. To get a better insight, it would be interesting to redo the analysis, with data unaffected by COVID-19.
 
-### **Repository Overview**
+## **Repository Overview**
 <img width="205" alt="image" src="https://user-images.githubusercontent.com/98964062/166496038-e45a4043-6195-4686-abca-f7eac2080550.png">
 
-### **Running Instructions**
+## **Running Instructions**
 The running instructions can be found [here](https://github.com/sannejansen/Airbnb_Holmes/blob/my_project/Project%20documentation.md).
 
-### **Literature**
+## **Literature**
 - Admiak, C. (2018). Mapping Airbnb supply in European cities. *Annals of Tourism Research*, 71(c), 67–71. [https://doi.org/10.1016/j.annals.2018.02.008](https://doi.org/10.1016/j.annals.2018.02.008)
 - Airbnb. (2021, December 31). *About us*. Airbnb Newsroom. Retrieved from [https://news.airbnb.com/about-us/](https://news.airbnb.com/about-us/)
 - Can, A. (1992). Specification and estimation of hedonic housing price models. *Regional Science and Urban Economics*, 22(3), 453–474. [https://doi.org/10.1016/0166-0462(92)90039-4](https://doi.org/10.1016/0166-0462(92)90039-4)
 
-### **About**
+## **About**
 This repository is created by five students of the master Marketing Analytics at Tilburg University. For the course Data Preparation and Workflow Management, coordinated and instructed by Associate Professor Hannes Datta.
