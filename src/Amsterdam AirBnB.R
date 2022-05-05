@@ -269,9 +269,9 @@ legend(x = "topright",
        col = c(1, 2, 3, 4, 11, 6, 7, 8, 'pink', 10, 5, 12, 'violetred3', 14, 'lemonchiffon3', 16, 17, 18, 19, 20, 21, 22),
        lwd = 2)
 
-############################################################
-#Correlation matrix between all the neighbourhoods' prices##
-############################################################
+##########################################
+#Remove the date column in  the datasets##
+##########################################
 See_All_neighbourhoods_without_date <- Average_Daily_price_per_neighbourhoods[,2:23]
 View(See_All_neighbourhoods_without_date)
 
@@ -285,6 +285,11 @@ summary(See_All_neighbourhoods_without_date)
 See_All_neighbourhoods_without_date$Daily_price_means <- rowMeans(See_All_neighbourhoods_without_date)
 
 View(See_All_neighbourhoods_without_date)
+
+######################################################
+#See what the average price changes are over one year#
+######################################################
+
 
 #Select only the first seven and last seven, to compare to each other
 See_All_neighbourhoods_without_date_First_seven <- head(See_All_neighbourhoods_without_date, 7)
