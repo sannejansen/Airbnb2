@@ -33,12 +33,12 @@ url_listings <- "http://data.insideairbnb.com/the-netherlands/north-holland/amst
 url_calendar <- "http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/calendar.csv.gz"
 
 
-download_data(url_listings, "data/listings")
-download_data(url_calendar, "data/calendar")
+download_data(url_listings, "listings")
+download_data(url_calendar, "calendar")
 
 
-AirBNB_AMS_calendar <- read.csv("data/calendar.csv")
-AirBNB_AMS_listings <- read.csv("data/listings.csv")
+AirBNB_AMS_calendar <- read.csv("calendar.csv")
+AirBNB_AMS_listings <- read.csv("listings.csv")
 
 ######
 #data#
