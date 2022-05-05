@@ -68,9 +68,9 @@ View(AirBNB_AMS_listings_new)
 
 #Table with average price per neighbourhood
 Table_Average_price <-  (AirBNB_AMS_listings_new %>%
-                           group_by(neighbourhood_cleansed) %>%
-                           na.omit(AirBNB_AMS_listings_new) %>%
-                           summarise_at(vars(price), list(price = mean)))
+                             group_by(neighbourhood_cleansed) %>%
+                             na.omit(AirBNB_AMS_listings_new) %>%
+                             summarise_at(vars(price), list(price = mean)))
 
 print(Table_Average_price, n=Inf, na.rm=TRUE)
 
@@ -92,41 +92,218 @@ Neighbourhoods_price_date <- subset(AirBNB_Calendar_and_Listings, select = c(id,
 #Filter out the dollar sign before the price in this new dataset
 Neighbourhoods_price_date$price = as.numeric(gsub("\\$", "", Neighbourhoods_price_date$price,))
 
-#Average price per day overall
+###############################
+#Average price per day overall#
+###############################
+
 Average_Daily_price_all_neighbourhoods <- Neighbourhoods_price_date %>%
     group_by(date) %>%
     summarise_at(vars(price), list(price = mean), na.rm = TRUE)
-
-#Average price per day, per neighbourhood
-Average_Daily_price_per_neighbourhood <- Neighbourhoods_price_date %>%
-    group_by(date) %>%
-    summarise_at(vars(price), list(price = mean), na.rm = TRUE)
-
-
-View(Neighbourhoods_price_date)
-
+#################################################
+#Price per day for every neighourhood seperately#
+#################################################
 Neighbourhoods_price_date_no_id <- select(Neighbourhoods_price_date, -id)
-View(Neighbourhoods_price_date_no_id)
 
-try4 <- Neighbourhoods_price_date_no_id %>%
-    spread(neighbourhood_cleansed, price)
+Neighbourhoods_price_date_no_id <- Neighbourhoods_price_date_no_id %>%
+    group_by(date, neighbourhood_cleansed) %>%
+    summarize(price_mean = mean(price, na.rm = TRUE))
 
-View(try4)
+Average_Daily_price_per_neighbourhoods <- Neighbourhoods_price_date_no_id %>%
+    pivot_wider(names_from = neighbourhood_cleansed, values_from = price_mean) 
 
-#Filter out the first neighbourhood: Bijlmer-Centrum (Price_1BC)
-Bijlmer_Centrum_complete <- subset(Neighbourhoods_price_date, neighbourhood_cleansed %in% c("Bijlmer-Centrum"))
-Bijlmer_Centrum <-   na.omit(Bijlmer_Centrum_complete)
+View(Average_Daily_price_per_neighbourhoods)
+Average_Daily_price_per_neighbourhoods <- Average_Daily_price_per_neighbourhoods[-c(367),]
+#Make a new .csv file for the All_Neighbourhoods dataset
+write.csv(Average_Daily_price_per_neighbourhoods, "Average_Daily_Prices_Per_Neighbourhood.csv.gz")
 
-View(Bijlmer_Centrum)
+##########################################
+#See an example plot of one neighbourhood#
+##########################################
 
-#Then, make an average price per day for the 1st neighbourhood
-Daily_mean_BC_average <-  (Bijlmer_Centrum %>%
-                               group_by(date) %>%
-                               summarise_at(vars(price), list(price = mean), na.rm = TRUE))
+Average_Daily_price_per_neighbourhoods$date <- as.Date(Average_Daily_price_per_neighbourhoods$date)
+Date <- Average_Daily_price_per_neighbourhoods$date
 
-Daily_mean_BC_average <-  Daily_mean_BC_average %>%
-    rename(Price_1BC = price)
+plot(Date,
+     Average_Daily_price_per_neighbourhoods$`Bijlmer-Centrum`,
+     main = "Bijlmer Centrum example",
+     xlab = "Date",
+     ylab = "Price",
+     type = "l",
+     col = "pink", 
+     lwd = "2",
+     xaxt = "n")
+axis(1,
+     Average_Daily_price_per_neighbourhoods$date,
+     format(Average_Daily_price_per_neighbourhoods$date, "%m"))
+
+#See the data in a scatterplot here:
+scatter.smooth(Date,
+               Average_Daily_price_per_neighbourhoods$`Bijlmer-Centrum`,
+               main = "Bijlmer Centrum example",
+               xlab = "Date",
+               ylab = "Price",
+               col = "pink", 
+               lwd = "2",
+               xaxt = "n")
+axis(1,
+     Average_Daily_price_per_neighbourhoods$date,
+     format(Average_Daily_price_per_neighbourhoods$date, "%m"))
+#####################################
+#See the plot for all neighbourhoods#
+#####################################
+
+plot(Date,
+     Average_Daily_price_per_neighbourhoods$`Bijlmer-Centrum`,
+     type = "l",
+     col = "1", 
+     lwd = "2",
+     ylim = c(100,247))
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Bijlmer-Oost`, 
+      type = "l",
+      lwd = "2",
+      col = "2")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Bos en Lommer`, 
+      type = "l",
+      lwd = "2",
+      col = "3")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Buitenveldert - Zuidas`, 
+      type = "l",
+      lwd = "2",
+      col = "4")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Centrum-Oost`, 
+      type = "l",
+      lwd = "2",
+      col = "11")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Centrum-West`, 
+      type = "l",
+      lwd = "2",
+      col = "6")                   
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`De Aker - Nieuw Sloten`, 
+      type = "l",
+      lwd = "2",
+      col = "7")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`De Baarsjes - Oud-West`, 
+      type = "l",
+      lwd = "2",
+      col = "8")                              
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`De Pijp - Rivierenbuurt`, 
+      type = "l",
+      lwd = "2",
+      col = "pink")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Gaasperdam - Driemond`, 
+      type = "l",
+      lwd = "2",
+      col = "10")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Geuzenveld - Slotermeer`, 
+      type = "l",
+      lwd = "2",
+      col = "5")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`IJburg - Zeeburgereiland`, 
+      type = "l",
+      lwd = "2",
+      col = "12")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Noord-Oost`, 
+      type = "l",
+      lwd = "2",
+      col = "violetred3")                   
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Noord-West`, 
+      type = "l",
+      lwd = "2",
+      col = "14")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Oostelijk Havengebied - Indische Buurt`, 
+      type = "l",
+      lwd = "2",
+      col = "lemonchiffon3")                                            
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$Osdorp, 
+      type = "l",
+      lwd = "2",
+      col = "16")                   
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Oud-Noord`, 
+      type = "l",
+      lwd = "2",
+      col = "17")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$`Oud-Oost`, 
+      type = "l",
+      lwd = "2",
+      col = "18")                              
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$Slotervaart, 
+      type = "l",
+      lwd = "2",
+      col = "19")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$Watergraafsmeer, 
+      type = "l",
+      lwd = "2",
+      col = "20")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$Westerpark, 
+      type = "l",
+      lwd = "2",
+      col = "21")
+lines(Date, 
+      Average_Daily_price_per_neighbourhoods$Zuid,
+      type = "l",
+      lwd = "2",
+      col = "violetred3")
+legend(x = "topright",
+       legend = c("BC", "BO", "BL","BZ", "CO", "CW","DANS", "BOW", "DPRB","GD", "GS", "IZ", "NO", "NW", "OHIB", "OD", "ON", "OO", "SV", "WGM", "WP", "ZUID"),
+       lty = c(1,1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1, 1 ,1 ,1 , 1, 1, 1),
+       col = c(1, 2, 3, 4, 11, 6, 7, 8, 'pink', 10, 5, 12, 'violetred3', 14, 'lemonchiffon3', 16, 17, 18, 19, 20, 21, 22),
+       lwd = 2)
+
+############################################################
+#Correlation matrix between all the neighbourhoods' prices##
+############################################################
+See_All_neighbourhoods_without_date <- Average_Daily_price_per_neighbourhoods[,2:23]
+View(See_All_neighbourhoods_without_date)
 
 
+summary(See_All_neighbourhoods_without_date)
+#########################
+#Average prices per day##
+#########################
 
+#Add a row with the average price per day regarding all neighbourhoods
+See_All_neighbourhoods_without_date$Daily_price_means <- rowMeans(See_All_neighbourhoods_without_date)
+
+View(See_All_neighbourhoods_without_date)
+
+#Select only the first seven and last seven, to compare to each other
+See_All_neighbourhoods_without_date_First_seven <- head(See_All_neighbourhoods_without_date, 7)
+View(See_All_neighbourhoods_without_date_First_seven)
+
+See_All_neighbourhoods_without_date_Last_seven <- tail(See_All_neighbourhoods_without_date, 7)
+View(See_All_neighbourhoods_without_date_Last_seven)
+
+colMeans(See_All_neighbourhoods_without_date_First_seven)
+colMeans_See_All_neighbourhoods_without_date_First_seven <-  colMeans(See_All_neighbourhoods_without_date_First_seven)
+View(colMeans_See_All_neighbourhoods_without_date_First_seven)
+
+colMeans(See_All_neighbourhoods_without_date_Last_seven)
+colMeans_See_All_neighbourhoods_without_date_Last_seven <-  colMeans(See_All_neighbourhoods_without_date_Last_seven)
+View(colMeans_See_All_neighbourhoods_without_date_Last_seven)
+
+Difference_colMeans <- print(colMeans_See_All_neighbourhoods_without_date_First_seven- colMeans_See_All_neighbourhoods_without_date_Last_seven )
+
+Price_Change <- print(Difference_colMeans/colMeans_See_All_neighbourhoods_without_date_First_seven)
+
+Price_Change_100 <- print(Price_Change * 100)
 
