@@ -1,5 +1,5 @@
 # Linear Regression and Plots
-**The R codes can be found in the file airbnb/Amsterdam AirBnB.R starting from line 315**
+**The R codes can be found in the file [airbnb/Amsterdam AirBnB.R](https://github.com/sannejansen/Airbnb2/blob/main/airbnb/Amsterdam%20AirBnB.R) starting from line 315**
 
 ## Linear Regression
 Above we conducted a linear regression to test whether there was a relationship between the price (dependent variable) and review_score_rating (independent variable). As you can see in the output the estimated coefficient is 15.990. This means that the price increases with 15.990 if the independent variable (review_score_rating) increases by one unit. Moreover, from the linear regression we can conclude that there is a significant relationship between price and review_scores rating, since it is <0.05.
