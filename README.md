@@ -134,6 +134,7 @@ The following programs need to be installed to replicate the project:<br/>
 
 ### How to run <br/>
 Clone the repository, this can be done by clicking the green button on the top right called "Code" and copying the HTTPS. Make sure to have git installed on your computer, instructions can be found on this page. Open the Command Prompt or Terminal on your laptop or desktop and type $ git clone https://github.com/sannejansen/Airbnb_Holmes.git. If the cloning was successful, a new sub-directory appears on your local drive in the directory where you cloned your repository.
+HIER MOET NOG IETS BIJ OVER HOE JE DIE MAKEFILES MOET RUNNEN
 
 
 ## **Literature**
