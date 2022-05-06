@@ -101,15 +101,14 @@ As you can see, all the review scores are between 4.66 and 4.85. The neighborhoo
 
 ## **Repository Overview**
 ```txt
-├── data
-├── gen
-│   ├── analysis
-│   ├── data-preparation
-│   ├── paper
+├── airbnb # This is where the full R-code is stored
+├── data # This is where the raw data is or will be stored (after running the make file)
+├── gen 
+│   ├── output # This is where the PDFs of the analyses are or will be stored (after running the make file)
+│   └── temp # This is where temporary files are or will be stored (after running the make file)
 └── src
-    ├── analysis
-    ├── data-preparation
-    └── paper
+    ├── analysis # This is where the codes for the analyses are stored
+    └── data-preparation # This is where the data can be downloaded and cleaned
 ```
 ## **Running Instructions**
 ### Dependencies<br/>
@@ -143,7 +142,7 @@ Run make -n (to preview the changes) and then type make to actually do it.
 - Can, A. (1992). Specification and estimation of hedonic housing price models. *Regional Science and Urban Economics*, 22(3), 453–474. [https://doi.org/10.1016/0166-0462(92)90039-4](https://doi.org/10.1016/0166-0462(92)90039-4)
 
 ## **About**
-This repository is created by five students of the master Marketing Analytics at Tilburg University. For the course Data Preparation and Workflow Management, coordinated and instructed by Associate Professor Hannes Datta.
+This repository is created by five students of the master Marketing Analytics at Tilburg University. This repository is for the course Data Preparation and Workflow Management, coordinated and instructed by Associate Professor Hannes Datta.
 
 ### Authors, Email addresses and GitHub Stats Cards<br/>
 - Dianne Burgess - MSc Marketing Analytics student
