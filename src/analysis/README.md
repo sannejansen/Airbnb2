@@ -46,3 +46,6 @@ We can assume that the observations are independent, and thus that there is no p
 
 ### All Neighbourhoods
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/98964062/167151547-6f0c32e7-5c94-4353-8da7-1954eca69a9b.png">
+
+In this graph you can see the daily price over time of every neighbourhood. 
+As you can see, the prices are the highest during the holidays, as a big spike can be seen right at the month January. This is obvious, ofcourse because on that date it's New Year's Eve and people rent out AirBnB's to celebrate. We can also see that prices drop immediately after New Year's and then slowly risee during the period of January until May. After May, prices stay at a pretty steady level for the rest of the year. Until December, when we can see a spike again. This is also due to the Holidays.
