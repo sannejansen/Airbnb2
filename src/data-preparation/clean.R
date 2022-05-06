@@ -89,4 +89,4 @@ Average_Daily_price_per_neighbourhoods <- Neighbourhoods_price_date_no_id %>%
 Average_Daily_price_per_neighbourhoods <- Average_Daily_price_per_neighbourhoods[-c(367),]
 
 #Make a new .csv file for the All_Neighbourhoods dataset
-write.csv(Average_Daily_price_per_neighbourhoods, "../../gen/temp/aggregated_df.csv.gz")
+write.csv(Average_Daily_price_per_neighbourhoods, "../../gen/temp/aggregated_df.csv")
