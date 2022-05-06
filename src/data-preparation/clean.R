@@ -14,8 +14,8 @@ library(tidyverse)
 #data#
 ######
 
-reviews <- read.csv("../../data/calendar.csv")
-listings <- read.csv("../../data/listings.csv")
+AirBNB_AMS_calendar <- read.csv("../../data/calendar.csv")
+AirBNB_AMS_listings <- read.csv("../../data/listings.csv")
 
 #Filter out the dollar sign before the prices
 AirBNB_AMS_listings$price = as.numeric(gsub("\\$", "", AirBNB_AMS_listings$price))
@@ -72,9 +72,11 @@ Neighbourhoods_price_date$price = as.numeric(gsub("\\$", "", Neighbourhoods_pric
 Average_Daily_price_all_neighbourhoods <- Neighbourhoods_price_date %>%
     group_by(date) %>%
     summarise_at(vars(price), list(price = mean), na.rm = TRUE)
+    
 #################################################
 #Price per day for every neighourhood seperately#
 #################################################
+
 Neighbourhoods_price_date_no_id <- select(Neighbourhoods_price_date, -id)
 
 Neighbourhoods_price_date_no_id <- Neighbourhoods_price_date_no_id %>%
@@ -85,5 +87,6 @@ Average_Daily_price_per_neighbourhoods <- Neighbourhoods_price_date_no_id %>%
     pivot_wider(names_from = neighbourhood_cleansed, values_from = price_mean) 
 
 Average_Daily_price_per_neighbourhoods <- Average_Daily_price_per_neighbourhoods[-c(367),]
+
 #Make a new .csv file for the All_Neighbourhoods dataset
-write.csv(Average_Daily_price_per_neighbourhoods, "Average_Daily_Prices_Per_Neighbourhood.csv.gz")
+write.csv(Average_Daily_price_per_neighbourhoods, "../../gen/temp/aggregated_df.csv.gz")
