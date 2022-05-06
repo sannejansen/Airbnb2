@@ -6,7 +6,7 @@ library(reshape2)
 #####################################
 
 #Import data
-Average_Daily_Prices_Per_Neighbourhood_all <- read.csv("../../gen/temp/Average_Daily_Prices_Per_Neighbourhood.csv.gz")
+Average_Daily_Prices_Per_Neighbourhood_a <- read.csv("../../gen/temp/Average_Daily_Prices_Per_Neighbourhood.csv.gz")
 
 pdf("../../gen/output/Average_Daily_price_per_neighbourhoods_all.pdf")
 plot(Date,

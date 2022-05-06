@@ -1,5 +1,14 @@
+library(tidyr)
+library(haven)
 library(dplyr)
+library(ggplot2)
+library(cluster)
+library(factoextra)
+library(car)
+library(lubridate)
 library(reshape2)
+library(TSstudio)
+library(tidyverse)
 
 ######
 #data#
