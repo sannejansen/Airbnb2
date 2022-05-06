@@ -39,6 +39,7 @@ We can assume that the observations are independent, and thus that there is no p
 ### One Neighbourhood
 #### Line plot 
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/98964062/167151655-75f31c90-224e-4f56-bd8e-dd4563b81437.png">
+
 #### Scatterplot 
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/98964062/167151718-7c3c81f8-b17e-48a6-b6fb-f7c67bdf7206.png">
 
