@@ -142,7 +142,7 @@ Run make -n (to preview the changes) and then type make to actually do it.
 - Can, A. (1992). Specification and estimation of hedonic housing price models. *Regional Science and Urban Economics*, 22(3), 453–474. [https://doi.org/10.1016/0166-0462(92)90039-4](https://doi.org/10.1016/0166-0462(92)90039-4)
 
 ## **About**
-This repository is created by five students of the master Marketing Analytics at Tilburg University. For the course Data Preparation and Workflow Management, coordinated and instructed by Associate Professor Hannes Datta.
+This repository is created by five students of the master Marketing Analytics at Tilburg University. This repository is for the course Data Preparation and Workflow Management, coordinated and instructed by Associate Professor Hannes Datta.
 
 ### Authors, Email addresses and GitHub Stats Cards<br/>
 - Dianne Burgess - MSc Marketing Analytics student
