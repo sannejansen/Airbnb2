@@ -132,9 +132,7 @@ The following programs need to be installed to replicate the project:<br/>
       - The raw data we used for writing this code on Amsterdam can be found in this Github [here](https://github.com/sannejansen/Airbnb_Holmes/tree/my_project/raw_data).
 
 ### How to run <br/>
-Clone the repository, this can be done by clicking the green button on the top right called "Code" and copying the HTTPS. Make sure to have git installed on your computer, instructions can be found on this page. Open the Command Prompt or Terminal on your laptop or desktop and type $ git clone https://github.com/sannejansen/Airbnb_Holmes.git. If the cloning was successful, a new sub-directory appears on your local drive in the directory where you cloned your repository.
-HIER MOET NOG IETS BIJ OVER HOE JE DIE MAKEFILES MOET RUNNEN
-Run make -n (to preview the changes) and then type make to actually do it.
+Clone the repository, this can be done by clicking the green button on the top right called "Code" and copying the HTTPS. Make sure to have git installed on your computer, instructions can be found on this page. Open the Command Prompt or Terminal on your laptop or desktop and type $ git clone https://github.com/sannejansen/Airbnb_Holmes.git. If the cloning was successful, a new sub-directory appears on your local drive in the directory where you cloned your repository. Then type make and press enter to run the repository.
 
 ## **Literature**
 - Admiak, C. (2018). Mapping Airbnb supply in European cities. *Annals of Tourism Research*, 71(c), 67–71. [https://doi.org/10.1016/j.annals.2018.02.008](https://doi.org/10.1016/j.annals.2018.02.008)
