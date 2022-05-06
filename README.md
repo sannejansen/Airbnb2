@@ -70,6 +70,35 @@ The mean of the prices of the listings in a specific neigborhood from the first 
 
 After seeing these results, it can be concluded that most of the listings were priced lower at the end of the year, compared to the beginning, also in the popular neigborhoods. In this case it cannot be concluded that the popularity of a neigborhood affects the price of a listing. A possible explanation for the decrease in price, might be COVID-19. In order to keep attracting people, it is possible that the prices have been reduced during this period. To get a better insight, it would be interesting to redo the analysis, with data unaffected by COVID-19.
 
+
+| **Neighborhood** | **% Review_scores_rating ** |
+| ------------ | -------------|
+| Centrum-West  | 4.75 |
+| De Baarsjes – Oud-West | 4.82 |
+| Centrum-Oost	| 4.79 |
+| De Pijp – Rivierenbuurt | 4.81 |
+| Westerpark | 4.81  |
+| Zuid	| 4.81 |
+| Oud-Oost | 4.80 |
+| Oud-Noord	| 4.77 |
+| Bos en Lommer | 4.82 |
+| Oostenlijk Havengebied – Indische Buurt | 4.80 |
+| Ijburg – Zeeburgereiland |	4.75 |
+| Watergraafsmeer | 4.76 |
+| Noord-West | 4.83 |
+| Slotervaart | 4.83 |
+| Noord-Oost | 4.85 |
+| Geuzenveld – Slotermeer |	4.74 |
+| Buitenveldert – Zuidas | 4.70 |
+| De Aker – Nieuw Sloten | 4.77 |
+| Gaasperdam – Driemond	| 4.72 |
+| Osdorp | 4.78 |
+| Bijlmer-Centrum | 4.66 |
+| Bijlmer-Oost | 4.80 |
+
+As you can see, all the review scores are between 4.66 and 4.85. The neighborhood Bijlmer-Centrum has the lowest score and neighborhood Noord-Oost has the highest score. The average review score is 4.78. 
+
+
 ## **Repository Overview**
 ```txt
 ├── data
@@ -105,6 +134,7 @@ The following programs need to be installed to replicate the project:<br/>
 
 ### How to run <br/>
 Clone the repository, this can be done by clicking the green button on the top right called "Code" and copying the HTTPS. Make sure to have git installed on your computer, instructions can be found on this page. Open the Command Prompt or Terminal on your laptop or desktop and type $ git clone https://github.com/sannejansen/Airbnb_Holmes.git. If the cloning was successful, a new sub-directory appears on your local drive in the directory where you cloned your repository.
+HIER MOET NOG IETS BIJ OVER HOE JE DIE MAKEFILES MOET RUNNEN
 
 
 ## **Literature**
