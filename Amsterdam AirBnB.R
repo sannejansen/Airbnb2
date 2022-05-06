@@ -312,12 +312,6 @@ Price_Change <- print(Difference_colMeans/colMeans_See_All_neighbourhoods_withou
 
 Price_Change_100 <- print(Price_Change * 100)
 
-####################################################################
-#create new dataset with the neighborhood, price and review scores##
-####################################################################
-listings2.0 <-  subset(listings, select = c ("neighbourhood_cleansed", "price", "review_scores_rating")) %>%
-    filter(na.rm = TRUE)
-
 ############################################################################################################
 #conduct a linear regression to examine the relationship between price as dv and review_scores_rating as iv#
 ############################################################################################################
