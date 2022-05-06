@@ -1,4 +1,5 @@
 # Linear Regression and Plots
+**The R codes can be found in the file [airbnb/Amsterdam AirBnB.R](https://github.com/sannejansen/Airbnb2/blob/main/airbnb/Amsterdam%20AirBnB.R) starting from line 315**
 
 ## Linear Regression
 Above we conducted a linear regression to test whether there was a relationship between the price (dependent variable) and review_score_rating (independent variable). As you can see in the output the estimated coefficient is 15.990. This means that the price increases with 15.990 if the independent variable (review_score_rating) increases by one unit. Moreover, from the linear regression we can conclude that there is a significant relationship between price and review_scores rating, since it is <0.05.
@@ -46,3 +47,6 @@ We can assume that the observations are independent, and thus that there is no p
 
 ### All Neighbourhoods
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/98964062/167151547-6f0c32e7-5c94-4353-8da7-1954eca69a9b.png">
+
+In this graph you can see the daily price over time of every neighbourhood. 
+As you can see, the prices are the highest during the holidays, as a big spike can be seen right at the month January. This is obvious, ofcourse because on that date it's New Year's Eve and people rent out AirBnB's to celebrate. We can also see that prices drop immediately after New Year's and then slowly risee during the period of January until May. After May, prices stay at a pretty steady level for the rest of the year. Until December, when we can see a spike again. This is also due to the Holidays.
